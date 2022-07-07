@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Klasern • Multidisciplinary Creative Consultant</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Klasern is a creative agency"/>
+    <meta name="keywords" content="klasern, creative"/>
+    <meta name="author" content="Klasern"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#f1f1f1"/>
+    <!-- <link rel="icon" href="icons/icon-16x16.png"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap">
+    <style>
+        ::selection {
+            background-color: rgb(227, 222, 157, 0.9);
+        }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            color: #111;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
+        }
+        h1 {
+            font-size: 30vw;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+        span {
+            font-size: 6vw;
+        }
+        a {
+            color: #111;
+        }
+        a:hover {
+            text-decoration: none;
+            background-color: rgb(227, 222, 157, 0.9);
+            transition: 0.3s;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .top {
+            width: 100%;
+            position: fixed;
+            top: 8%;
+        }
+        .middle {
+            position: relative;
+            top: 15%;
+        }
+        .bottom {
+            width: 100%;
+            position: fixed;
+            bottom: 8%;
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(73, 190, 170, 0.9);
+            border-radius: 50%;
+            position: absolute;
+            top: 34%;
+            left: 11%;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(69, 105, 144, 0.9);
+            position: absolute;
+            top: 4%;
+            left: 65%;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid rgb(239, 118, 122, 0.9);
+            position: absolute;
+            top: 82%;
+            left: 50%;
+        }
+        @media only screen and (min-width: 600px) {
+            h1 {
+                font-size: 13vw;
+            }
+            span {
+                font-size: 3vw;
+            }
+            .top {
+                top: 4%;
+            }
+            .middle {
+                top: 25%;
+            }
+            .bottom {
+                bottom: 8%;
+            }
+            .circle {
+                width: 300px;
+                height: 300px;
+                top: 41%;
+                left: 3%;
+            }
+            .square {
+                width: 200px;
+                height: 200px;
+                top: 8%;
+                left: 62%;
+            }
+            .triangle {
+                border-left: 90px solid transparent;
+                border-right: 90px solid transparent;
+                border-bottom: 150px solid rgb(239, 118, 122, 0.9);
+                top: 76%;
+                left: 53%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="triangle"></div>
+        <div class="top">
+            <span id="vn-time"></span>
+        </div>
+        <div class="middle">
+            <h1>đang xây dựng</h1>
+        </div>
+        <div class="bottom">
+            <span><a href="https://instagram.com/klasern.studio" target="blank">@klasern.studio</a></span>
+        </div>
+    </div>
+</body>
+<script>
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    var today  = new Date();
+    document.getElementById("vn-time").innerHTML = today.toLocaleDateString("vi-VN", options);
+</script>
+</html>
